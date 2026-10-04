@@ -1,11 +1,12 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://192.168.1.101:3000/vaccinations",
+    baseURL: `${import.meta.env.VITE_API_URL}/vaccinations`,
     headers: {
         "Content-Type": "application/json"
     }
 });
+
 api.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem("token");
@@ -20,4 +21,5 @@ api.interceptors.request.use(
         return Promise.reject(error);
     }
 );
+
 export default api;
