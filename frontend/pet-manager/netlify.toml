@@ -1,0 +1,4 @@
+[build]
+  base = "frontend/pet-manager"
+  command = "npm run build"
+  publish = "dist"
