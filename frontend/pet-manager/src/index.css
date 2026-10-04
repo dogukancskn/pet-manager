@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background-color: #f6f8fb;
+  color: #1f2937;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 76px;
+}
+
+.navbar-brand {
+  color: #111827 !important;
+  font-size: 1.25rem;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background-color: #eef4ff;
+
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  color: #6b7280 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main-content {
+  min-height: calc(100vh - 76px);
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0d6efd;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.page-header h1 {
+  margin-bottom: 8px;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.page-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 1rem;
+}
+
+.pet-count {
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  background-color: white;
+
+  color: #374151;
+
+  font-weight: 600;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stat-card {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 20px;
+
+  background-color: white;
+
+  border: 1px solid #e9edf3;
+
+  border-radius: 16px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background-color: #eef4ff;
+
+  font-size: 1.5rem;
+}
+
+.stat-icon.cat {
+  background-color: #fff4e6;
+}
+
+.stat-icon.dog {
+  background-color: #eaf8f0;
+}
+
+.stat-card span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #6b7280;
+
+  font-size: 0.85rem;
+}
+
+.stat-card strong {
+  font-size: 1.5rem;
+
+  color: #111827;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header h2 {
+  margin-bottom: 4px;
+
+  font-size: 1.4rem;
+
+  font-weight: 700;
+}
+
+.section-header p {
+  margin: 0;
+
+  color: #6b7280;
+}
+
+/* =========================
+   PET CARD
+========================= */
+
+.pet-card {
+  overflow: hidden;
+
+  background-color: white;
+
+  border: 1px solid #e8ebf0;
+
+  border-radius: 18px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   PET CARD HEADER
+========================= */
+
+.pet-card-header {
+  position: relative;
+
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5f8ff;
+}
+
+.pet-avatar {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: white;
+
+  font-size: 3rem;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.species-badge {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background-color: white;
+
+  color: #374151;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* =========================
+   PET BODY
+========================= */
+
+.pet-card-body {
+  padding: 22px;
+}
+
+.pet-name {
+  margin-bottom: 3px;
+
+  color: #111827;
+
+  font-size: 1.3rem;
+
+  font-weight: 700;
+}
+
+.pet-breed {
+  margin-bottom: 20px;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+}
+
+.pet-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.pet-info div {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.pet-info div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pet-info span {
+  color: #6b7280;
+
+  font-size: 0.85rem;
+}
+
+.pet-info strong {
+  color: #374151;
+
+  font-size: 0.85rem;
+}
+
+/* =========================
+   PET FOOTER
+========================= */
+
+.pet-card-footer {
+  display: flex;
+
+  gap: 8px;
+
+  padding: 16px 22px;
+
+  border-top: 1px solid #f0f1f3;
+}
+
+.pet-card-footer .btn {
+  border-radius: 9px;
+
+  font-weight: 500;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  border-radius: 10px;
+
+  font-weight: 500;
+}
+
+.btn-primary {
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .page-header {
+    align-items: flex-start;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .main-content .container {
+    padding-top: 30px !important;
+  }
+
+}
