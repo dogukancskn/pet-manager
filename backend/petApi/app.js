@@ -23,6 +23,8 @@ app.use("/auth", authRoutes);
 app.use("/pets", petRoutes);
 app.use("/vaccinations", vaccinationRoutes);
 
+const PORT = process.env.PORT || 3000;
+
 const startServer = async () => {
     try {
         await sequelize.authenticate();
@@ -31,8 +33,8 @@ const startServer = async () => {
         await sequelize.sync();
         console.log("DB sync edildi");
 
-        app.listen(3000, "0.0.0.0", () => {
-            console.log("Server 3000 portunda çalışıyor");
+        app.listen(PORT, "0.0.0.0", () => {
+            console.log(`Server ${PORT} portunda çalışıyor`);
         });
     } catch (error) {
         console.error(error);
